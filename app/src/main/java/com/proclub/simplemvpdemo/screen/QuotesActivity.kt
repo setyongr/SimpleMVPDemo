@@ -24,6 +24,7 @@ class QuotesActivity: AppCompatActivity(), QuotesView {
     private fun initListener() {
         buttonAdd.setOnClickListener {
             presenter.addQuotes(textQuote.text.toString())
+            textQuote.text.clear()
         }
 
         buttonClear.setOnClickListener {
